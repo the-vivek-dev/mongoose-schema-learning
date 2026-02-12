@@ -114,3 +114,19 @@
          Object → {}
          Array → []
 */
+==========================================================================
+Agar hum kisi nested object field ko response me dikhana chahte hain,
+to uske andar kam se kam ek property me default value define karna
+zaroori hota hai.
+
+Agar hum sirf {} bhej dete hain controller se, to Mongoose usko
+user-provided value maan leta hai aur inner default values apply
+nahi karta.
+
+Isliye better hai ki:
+
+- Ya to field ko undefined chhodo
+- Ya schema me inner properties me default do
+
+Tabhi response consistent aayega.
+
